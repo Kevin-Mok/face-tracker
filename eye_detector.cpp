@@ -113,8 +113,10 @@ void detectEyes(Mat &frame, CascadeClassifier &faceCascade, CascadeClassifier &e
       if (centers.size() > 1)
       {
           Point diff;
-          diff.x = (center.x - lastPoint.x) * 20;
-          diff.y = (center.y - lastPoint.y) * -30;
+          // diff.x = (center.x - lastPoint.x) * 20;
+          // diff.y = (center.y - lastPoint.y) * -30;
+          diff.x = (center.x - lastPoint.x) * 100;
+          diff.y = (center.y - lastPoint.y) * -80;
           mousePoint += diff;
       }
       lastPoint = center;
